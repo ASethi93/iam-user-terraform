@@ -2,6 +2,12 @@ provider "aws" {
   region                  = "ca-central-1"
   profile                 = "default"
 }
+
+provider "teamcity" {
+  address = "http://appbuilds.bcommons.net:8111/"
+  username = "asis"
+  password = "asisteam001"
+}
 resource "aws_iam_user" "u" {
   name          = "terraform"
   path          = "/"
